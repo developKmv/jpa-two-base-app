@@ -1,0 +1,1 @@
+# jpa-two-base-app
