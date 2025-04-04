@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  database_first:
+    image: 'postgres:latest'
+    ports:
+      - 15432:5432
+    env_file:
+      - .env
+    volumes:
+      # - ${PWD}/db-data/:/var/lib/postgresql/data/
+      - ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  database_second:
+    image: 'postgres:latest'
+    ports:
+      - 15433:5432
+    env_file:
+      - .env
+    volumes:
+      # - ${PWD}/db-data/:/var/lib/postgresql/data/
+      - ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql

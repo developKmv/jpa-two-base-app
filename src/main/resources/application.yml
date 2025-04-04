@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: two-base-app
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:15432/postgres
+    username: admin
+    password: admin
+    second:
+      url: jdbc:postgresql://127.0.0.1:15433/postgres
+      username: admin
+      password: admin
